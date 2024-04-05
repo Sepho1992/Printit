@@ -17,11 +17,18 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+let carousselImg= document.querySelector(".banner-img");
+let index= 0;
 
 function showPreviousImage(){
-	alert("image précédente");
+	carousselImg.src= "./assets/images/slideshow/"+slides[index].image;
+	index=index+1
 }
 
 function showNextImage(){
 	alert("image suivante");
 }
+
+const arrowleft= document.querySelector(".arrow_left")
+
+arrowleft.addEventListener("click",showPreviousImage);
